@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/representation/home/home_view.dart';
 import 'package:portfolio_website/router.dart';
+import 'package:portfolio_website/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,15 +19,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Portfolio',
-      darkTheme: ThemeData.dark(),
+      title: 'Magdy Yacoub',
       onGenerateRoute: _appRouter.generateRoute,
       themeMode: ThemeMode.dark,
       themeAnimationDuration: const Duration(milliseconds: 700),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppThemes.lightTheme,
+      darkTheme: AppThemes.darkTheme,
       home: const HomeView(),
     );
   }
