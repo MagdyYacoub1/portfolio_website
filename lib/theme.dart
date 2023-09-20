@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website/styles/colors.dart';
 
 /// App themes
@@ -8,9 +9,12 @@ class AppThemes {
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.dark,
       seedColor: AppColors.seedColor,
+      background: AppColors.bgColor,
     ),
     brightness: Brightness.dark,
     useMaterial3: true,
+    textTheme:
+        GoogleFonts.archivoBlackTextTheme().apply(bodyColor: Colors.white),
   );
 
   /// Dark Theme

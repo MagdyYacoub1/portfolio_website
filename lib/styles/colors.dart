@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// App colors
 class AppColors {
   /// Background color
-  static const bgColor = Color(0xFF040D12);
+  static const bgColor = Color(0xFF050304);
 
   /// Seed color
   static const seedColor = Color(0xFF183D3D);
