@@ -13,7 +13,7 @@ class BackgroundLayer extends StatelessWidget {
       right: -size.width * 0.06,
       bottom: size.height * 0.3,
       child: Image.asset(
-        'images/black-hole2.jpg',
+        'assets/images/black-hole2.jpg',
         fit: BoxFit.cover,
         color: Colors.black54,
         colorBlendMode: BlendMode.darken,

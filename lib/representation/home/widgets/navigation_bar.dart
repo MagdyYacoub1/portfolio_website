@@ -8,14 +8,18 @@ class MyNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final safeTopHeight = MediaQuery.of(context).padding.top;
     return Positioned(
-      top: 0,
+      top: safeTopHeight,
       right: 0,
       left: 0,
       child: ColoredBox(
         color: Colors.transparent,
         child: Padding(
-          padding: const EdgeInsets.only(left: 30, right: 50),
+          padding: const EdgeInsets.only(
+            left: 30,
+            right: 50,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -56,6 +60,9 @@ class _NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(title);
+    return Text(
+      title,
+      overflow: TextOverflow.ellipsis,
+    );
   }
 }
