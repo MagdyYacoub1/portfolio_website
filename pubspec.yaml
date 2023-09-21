@@ -38,6 +38,7 @@ dependencies:
   very_good_analysis: ^5.1.0
   google_fonts: ^6.0.0
   responsive_framework: ^1.1.1
+  device_preview: ^1.1.0
 
 dev_dependencies:
   flutter_test:
