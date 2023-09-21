@@ -18,25 +18,36 @@ class IntroSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Hi, I'm Magdy Yacoub",
-                    style: Theme.of(context)
-                        .textTheme
-                        .displayMedium!
-                        .copyWith(color: Colors.white),
-                  ),
-                  Text(
-                    "I'm a software Engineer",
-                    style: Theme.of(context)
-                        .textTheme
-                        .displaySmall!
-                        .copyWith(color: Colors.white),
-                  ),
-                ],
+              SizedBox(
+                width: size.width * 0.8,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Hi, I'm Magdy Yacoub",
+                      style: Theme.of(context)
+                          .textTheme
+                          .displayMedium!
+                          .copyWith(color: Colors.white),
+                    ),
+                    Text(
+                      "I'm a software Engineer",
+                      style: Theme.of(context)
+                          .textTheme
+                          .displaySmall!
+                          .copyWith(color: Colors.white),
+                    ),
+                    const SizedBox(height: 15),
+                    Text(
+                      '''I'm interested in open-source technologies\nand application development.''',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(color: Colors.white54),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
