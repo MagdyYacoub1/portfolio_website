@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/styles/colors.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 /// Navigation bar
 class MyNavigationBar extends StatelessWidget {
@@ -8,41 +9,39 @@ class MyNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final safeTopHeight = MediaQuery.of(context).padding.top;
     return Positioned(
-      top: safeTopHeight,
       right: 0,
       left: 0,
+      top: 0,
       child: ColoredBox(
         color: Colors.transparent,
         child: Padding(
           padding: const EdgeInsets.only(
             left: 30,
             right: 50,
+            top: 10,
+            bottom: 5,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
-                child: Image.asset(
-                  'images/brand_logo_only.png',
-                  fit: BoxFit.cover,
-                  width: 60,
-                ),
+              Image.asset(
+                'images/brand_logo_only.png',
+                fit: BoxFit.cover,
+                width: 9.sw,
               ),
-              const Row(
+              Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  _NavBarItem(title: 'Intro'),
-                  SizedBox(width: 50),
-                  _NavBarItem(title: 'About'),
-                  SizedBox(width: 50),
-                  _NavBarItem(title: 'Projects'),
-                  SizedBox(width: 50),
-                  _NavBarItem(title: 'Testimonials'),
-                  SizedBox(width: 50),
-                  _NavBarItem(title: "Let's get in touch"),
+                  const _NavBarItem(title: 'Intro'),
+                  SizedBox(width: 3.5.sw),
+                  const _NavBarItem(title: 'About'),
+                  SizedBox(width: 3.5.sw),
+                  const _NavBarItem(title: 'Projects'),
+                  SizedBox(width: 3.5.sw),
+                  const _NavBarItem(title: 'Testimonials'),
+                  SizedBox(width: 3.5.sw),
+                  const _NavBarItem(title: "Let's chat"),
                 ],
               ),
             ],
@@ -63,6 +62,10 @@ class _NavBarItem extends StatelessWidget {
     return Text(
       title,
       overflow: TextOverflow.ellipsis,
+      style: Theme.of(context).textTheme.displayMedium!.copyWith(
+            color: Colors.white,
+            fontSize: 3.sw,
+          ),
     );
   }
 }

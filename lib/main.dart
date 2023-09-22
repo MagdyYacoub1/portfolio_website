@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/representation/home/home_view.dart';
 import 'package:portfolio_website/router.dart';
 import 'package:portfolio_website/theme.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 void main() {
   runApp(
@@ -24,17 +25,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      title: 'Magdy Yacoub',
-      onGenerateRoute: _appRouter.generateRoute,
-      themeMode: ThemeMode.dark,
-      themeAnimationDuration: const Duration(milliseconds: 700),
-      theme: AppThemes.lightTheme,
-      darkTheme: AppThemes.darkTheme,
-      home: const HomeView(),
+    return ResponsiveApp(
+      builder: (context) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          title: 'Magdy Yacoub',
+          onGenerateRoute: _appRouter.generateRoute,
+          themeMode: ThemeMode.dark,
+          themeAnimationDuration: const Duration(milliseconds: 700),
+          theme: AppThemes.lightTheme,
+          darkTheme: AppThemes.darkTheme,
+          home: const HomeView(),
+        );
+      },
     );
   }
 }

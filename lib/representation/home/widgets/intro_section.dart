@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/representation/home/widgets/background_layer.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 ///
 class IntroSection extends StatelessWidget {
@@ -29,22 +30,22 @@ class IntroSection extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .displayMedium!
-                          .copyWith(color: Colors.white),
+                          .copyWith(color: Colors.white, fontSize: 8.sw),
                     ),
                     Text(
                       "I'm a software Engineer",
                       style: Theme.of(context)
                           .textTheme
                           .displaySmall!
-                          .copyWith(color: Colors.white),
+                          .copyWith(color: Colors.white, fontSize: 6.sw),
                     ),
-                    const SizedBox(height: 15),
+                    SizedBox(height: 2.sh),
                     Text(
-                      '''I'm interested in open-source technologies\nand application development.''',
+                      '''I'm interested in open-source\nand application development.''',
                       style: Theme.of(context)
                           .textTheme
                           .headlineSmall!
-                          .copyWith(color: Colors.white54),
+                          .copyWith(color: Colors.white54, fontSize: 5.sw),
                     ),
                   ],
                 ),

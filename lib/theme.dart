@@ -13,8 +13,7 @@ class AppThemes {
     ),
     brightness: Brightness.dark,
     useMaterial3: true,
-    textTheme:
-        GoogleFonts.archivoBlackTextTheme().apply(bodyColor: Colors.white),
+    textTheme: GoogleFonts.archivoBlackTextTheme(),
   );
 
   /// Dark Theme
